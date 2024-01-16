@@ -1,0 +1,173 @@
+{
+	"has_more": true,
+	"current_page": 1,
+	"last_page": 5,
+	"next_page": 2,
+	"list": [
+		{
+			"id": 5,
+			"text": "Falamos muito da possibilidade de mudança. Como isso acontece no contexto da formação contemplativa?",
+			"title": "A libertação dos pensamentos",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/iamgeartigo2.jpg",
+			"author_name": "Matthieu Ricard",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/5\/a-libertacao-dos-pensamentos",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/iamgeartigo2.jpg"
+		},
+		{
+			"id": 11,
+			"text": "O que existe em algo tão simples como sentar-se em silêncio e observar a respiração que nos evoca pânico, medo e até mesmo hostilidade?",
+			"title": "Por que achamos difícil meditar?",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/farola.png",
+			"author_name": "Ed e Deb Shapiro",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/11\/por-que-achamos-dificil-meditar",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/farola.png"
+		},
+		{
+			"id": 12,
+			"text": "Ed Halliwell, professor de mindfulness, conta como chegou à meditação depois de lidar com a ansiedade e a depressão.",
+			"title": "Aprendendo a meditar através da dificuldade",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/difc.png",
+			"author_name": "Ed Halliwell",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/12\/aprendendo-a-meditar-atraves-da-dificuldade",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/difc.png"
+		},
+		{
+			"id": 21,
+			"text": "Pesquisas mostram que temos a capacidade não somente de parar a tagarelice das nossas histórias, como podemos também reduzir nosso stress, refazer nossas conexões cerebrais e reinventar nossas relações por meio de responder a elas de modo diferente.",
+			"title": "Como impedir que suas histórias comandem a sua vida",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/img222.jpg",
+			"author_name": "B Grace Bullock",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/21\/como-impedir-que-suas-historias-comandem-a-sua-vida",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/img222.jpg"
+		},
+		{
+			"id": 28,
+			"text": "Dzogchen Ponlop Rinpoche fala sobre como podemos nos relacionar com nossos pensamentos durante a meditação.",
+			"title": "Meditação: Pegar e Soltar",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/thumbmeditardzong.jpg",
+			"author_name": "Dzogchen Ponlop Rinpoche",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/28\/meditacao-pegar-e-soltar",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/thumbmeditardzong.jpg"
+		},
+		{
+			"id": 47,
+			"text": "Em sua primeira visita ao Brasil, o diretor-chefe do Center for Healthy Minds nos fala um pouco sobre a prática de mindfulness e sua relação com o cultivo do bem-estar sob o ponto de vista científico.",
+			"title": "Meditação e a ciência do bem-estar: entrevista com Cortland Dahl",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/47.jpg",
+			"author_name": "Cortland Dahl",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/47\/meditacao-e-a-ciencia-do-bem-estar-entrevista-com-cortland-dahl",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/47.jpg"
+		},
+		{
+			"id": 49,
+			"text": "Em seu novo livro “Atenção – Por uma política do cuidado” o escritor e zen-budista Alex Castro analisa as diferentes maneiras pelas quais podemos exercitar a atenção, não em busca do próprio autodesenvolvimento, mas sim no cuidado com o outro e também como instrumento de ação política.",
+			"title": "Estar presente: o cultivo da atenção na era da distração – Trecho do livro de Alex Castro",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/49-1.jpg",
+			"author_name": "Alex Castro",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/49\/estar-presente-o-cultivo-da-atencao-na-era-da-distracao--trecho-do-livro-de-alex-castro",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/49-1.jpg"
+		},
+		{
+			"id": 54,
+			"text": "Muitas vezes a nossa atenção plena se torna focada demais, espremida demais. Atenção espremida, certo? Quando você foca demais em atenção plena, na verdade isso pode as vezes ser contraproducente.",
+			"title": "Como relaxar em atenção plena",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/54.png",
+			"author_name": "Dzogchen Ponlop Rinpoche",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/54\/como-relaxar-em-atencao-plena",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/54.png"
+		},
+		{
+			"id": 56,
+			"text": "Dzigar Kongtrul Rinpoche reflete sobre como podemos nos viciar em perseguir sentimentos agradáveis e como podemos cultivar uma visão que é mais ampla do que isso.",
+			"title": "Estamos viciados em buscar sentimentos?",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/56.jpg",
+			"author_name": "Dzigar Kongtrul Rinpoche",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/56\/estamos-viciados-em-buscar-sentimentos",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/56.jpg"
+		},
+		{
+			"id": 57,
+			"text": "O professor de meditação de insight Joseph Goldstein explica como tratar a consciência como objeto de meditação",
+			"title": "Estes não são “seus” pensamentos",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/57.jpg",
+			"author_name": "Joseph Goldstein",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/57\/estes-nao-sao-seus-pensamentos",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/57.jpg"
+		},
+		{
+			"id": 58,
+			"text": "Jack Kornfield nos ensina a transformativa prática de atenção plena conhecida como “Chuva”",
+			"title": "Como a “Chuva” pode te nutrir",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/58.jpg",
+			"author_name": "Jack Kornfield",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/58\/como-a-chuva-pode-te-nutrir",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/58.jpg"
+		},
+		{
+			"id": 60,
+			"text": "Podemos reprimir a raiva e a agressão ou agir de qualquer forma, tornando as coisas piores para nós mesmos e para os outros. Ou podemos praticar a paciência: espere, experimente a raiva e investigue sua natureza. Pema Chödrön nos leva passo a passo através desta prática poderosa.",
+			"title": "A resposta para raiva e agressão é paciência",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/article-a-resposta-para-raiva-e-agressao-e-paciencia-60.jpg",
+			"author_name": "Pema Chodron",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/60\/a-resposta-para-raiva-e-agressao-e-paciencia",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/article-a-resposta-para-raiva-e-agressao-e-paciencia-60.jpg"
+		},
+		{
+			"id": 61,
+			"text": "Comentários em dois versos das Trinta e Sete práticas do Bodhsattva, de Tokme Zongpo.",
+			"title": "Esqueça a felicidade!",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/article-esqueca-a-felicidade-61.jpg",
+			"author_name": "Ken Mcleod",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/61\/esqueca-a-felicidade",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/article-esqueca-a-felicidade-61.jpg"
+		},
+		{
+			"id": 62,
+			"text": "Como seres humanos, compartilhamos em comum o nosso coração amoroso universal. Podemos pensar em nós mesmos como separados dos outros e os outros podem pensar em si mesmos separados de nós. No entanto, todos somos iguais",
+			"title": "Coração amoroso universal e responsabilidade universal",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/article-coracao-amoroso-universal-e-responsabilidade-universal-62.jpg",
+			"author_name": "Dzigar Kongtrul Rinpoche",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/62\/coracao-amoroso-universal-e-responsabilidade-universal",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/article-coracao-amoroso-universal-e-responsabilidade-universal-62.jpg"
+		},
+		{
+			"id": 63,
+			"text": "Geshe Tenzin Wangyal Rinpoche, Zenkei Blanche Hartman e Narayan Helen Liebenson respondem a questão de um leitor.",
+			"title": "Como algumas pessoas podem ser bondosas e ativamente fazer o mal?",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/article-como-algumas-pessoas-podem-ser-bondosas-e-ativamente-fazer-o-mal-63.jpg",
+			"author_name": "Tenzin Wangyal e Zenkei Hartman e Narayan Liebenson",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/63\/como-algumas-pessoas-podem-ser-bondosas-e-ativamente-fazer-o-mal",
+			"premium": 0,
+			"order": 2,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/article-como-algumas-pessoas-podem-ser-bondosas-e-ativamente-fazer-o-mal-63.jpg"
+		}
+	]
+}
