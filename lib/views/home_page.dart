@@ -34,10 +34,19 @@ class _HomePageState extends State<HomePage> {
           create: (context) => AppRepository(
             Dio(BaseOptions(headers: AppRepository.baseHeaders)),
           ),
-          child: BlocProvider(
-            create: (context) => ArticleListCubit(
-              context.read<AppRepository>().listArticles,
-            ),
+          child: MultiBlocProvider(
+            providers: [
+              BlocProvider<ArticleListCubit>(
+                create: (context) => ArticleListCubit(
+                  context.read<AppRepository>().listArticles,
+                ),
+              ),
+              BlocProvider<QuoteListCubit>(
+                create: (context) => QuoteListCubit(
+                  context.read<AppRepository>().listQuotes,
+                ),
+              ),
+            ],
             child: const TabBarView(
               children: [
                 VideosTab(),
