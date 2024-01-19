@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lojong/bloc/article_list_cubit.dart';
+import 'package:lojong/bloc/paginated_list_cubit.dart';
 import 'package:lojong/repositories/app_repository.dart';
 import 'package:lojong/views/articles_tab.dart';
 import 'package:lojong/views/quotes_tab.dart';
@@ -28,17 +28,23 @@ class _HomePageState extends State<HomePage> {
             'INSPIRAÇÕES',
             style: GoogleFonts.asap(fontWeight: FontWeight.w700, fontSize: 14),
           ),
-          bottom: AppTabBar(),
+          bottom: const AppTabBar(),
         ),
-        body: BlocProvider(
-          create: (context) => ArticleListCubit(AppRepository(
-              Dio(BaseOptions(headers: AppRepository.baseHeaders)))),
-          child: const TabBarView(
-            children: [
-              VideosTab(),
-              ArticlesTab(),
-              QuotesTab(),
-            ],
+        body: RepositoryProvider(
+          create: (context) => AppRepository(
+            Dio(BaseOptions(headers: AppRepository.baseHeaders)),
+          ),
+          child: BlocProvider(
+            create: (context) => ArticleListCubit(
+              context.read<AppRepository>().listArticles,
+            ),
+            child: const TabBarView(
+              children: [
+                VideosTab(),
+                ArticlesTab(),
+                QuotesTab(),
+              ],
+            ),
           ),
         ),
       ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lojong/bloc/article_list_cubit.dart';
-import 'package:lojong/bloc/article_list_state.dart';
+import 'package:lojong/bloc/paginated_list_cubit.dart';
 
 class ArticlesTab extends StatefulWidget {
   const ArticlesTab({super.key});
@@ -31,7 +30,7 @@ class _ArticlesTabState extends State<ArticlesTab> {
     if (_scrollController.position.pixels >
         _scrollController.position.maxScrollExtent * 0.75) {
       print('trying to load more!!!');
-      context.read<ArticleListCubit>().loadMore();
+      context.read<PaginatedListCubit>().loadMore();
     }
   }
 
@@ -41,14 +40,14 @@ class _ArticlesTabState extends State<ArticlesTab> {
       builder: (context, state) {
         if (state.lastError != null) {
           return const Center(child: Text('Algo deu errado'));
-        } else if (state.articles.isEmpty && state.isLoading) {
+        } else if (state.list.isEmpty && state.isLoading) {
           return const Center(child: CircularProgressIndicator());
-        } else if (state.articles.isNotEmpty) {
+        } else if (state.list.isNotEmpty) {
           return ListView.builder(
             controller: _scrollController,
-            itemCount: state.articles.length,
+            itemCount: state.list.length,
             itemBuilder: (context, index) {
-              final article = state.articles[index];
+              final article = state.list[index];
               return ListTile(
                 title: Text(article.title),
                 subtitle: Text(article.text),
@@ -56,7 +55,7 @@ class _ArticlesTabState extends State<ArticlesTab> {
             },
           );
         } else {
-          return Center(child: Text('Lista vazia'));
+          return const Center(child: Text('Lista vazia'));
         }
       },
     );

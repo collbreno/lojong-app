@@ -1,32 +1,31 @@
 import 'package:equatable/equatable.dart';
-import 'package:lojong/models/article_summary.dart';
 import 'package:lojong/models/list_result.dart';
 
-class ArticleListState extends Equatable {
-  final List<ArticleSummaryModel> articles;
+class PaginatedListState<T> extends Equatable {
+  final List<T> list;
   final bool isLoading;
   final bool hasMore;
   final Object? lastError;
   final int? lastPage;
 
-  const ArticleListState._({
-    required this.articles,
+  const PaginatedListState._({
+    required this.list,
     required this.isLoading,
     required this.hasMore,
     required this.lastError,
     required this.lastPage,
   });
 
-  ArticleListState.initialState()
-      : articles = [],
+  PaginatedListState.initialState()
+      : list = [],
         isLoading = false,
         hasMore = true,
         lastPage = null,
         lastError = null;
 
-  ArticleListState addResult(ListResultModel<ArticleSummaryModel> result) {
-    return ArticleListState._(
-      articles: articles + result.items,
+  PaginatedListState<T> addResult(ListResultModel<T> result) {
+    return PaginatedListState._(
+      list: list + result.items,
       isLoading: false,
       hasMore: result.hasMore,
       lastError: null,
@@ -34,9 +33,9 @@ class ArticleListState extends Equatable {
     );
   }
 
-  ArticleListState loading() {
-    return ArticleListState._(
-      articles: articles,
+  PaginatedListState<T> loading() {
+    return PaginatedListState._(
+      list: list,
       isLoading: true,
       hasMore: hasMore,
       lastError: null,
@@ -44,9 +43,9 @@ class ArticleListState extends Equatable {
     );
   }
 
-  ArticleListState withError(Object error) {
-    return ArticleListState._(
-      articles: articles,
+  PaginatedListState<T> withError(Object error) {
+    return PaginatedListState._(
+      list: list,
       isLoading: false,
       hasMore: hasMore,
       lastError: error,
@@ -55,6 +54,5 @@ class ArticleListState extends Equatable {
   }
 
   @override
-  List<Object?> get props =>
-      [articles, isLoading, hasMore, lastError, lastPage];
+  List<Object?> get props => [list, isLoading, hasMore, lastError, lastPage];
 }
