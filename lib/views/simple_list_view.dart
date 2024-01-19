@@ -42,7 +42,8 @@ class SimpleListView<T> extends StatelessWidget {
   }
 
   Widget _buildList(List<T> items) {
-    return ListView.builder(
+    return ListView.separated(
+      separatorBuilder: (context, index) => const Divider(),
       itemCount: items.length,
       itemBuilder: (context, index) => itemBuilder(items[index]),
     );

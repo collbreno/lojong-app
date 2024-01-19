@@ -55,7 +55,13 @@ class _PaginatedListViewState<T> extends State<PaginatedListView<T>> {
   Widget _buildList(PaginatedListState<T> state) {
     var itemCount = state.items.length;
     if (state.isLoading) itemCount++;
-    return ListView.builder(
+    return ListView.separated(
+      separatorBuilder: (context, index) => const Divider(
+        height: 2,
+        color: Color.fromRGBO(151, 151, 151, 1),
+        indent: 12,
+        endIndent: 12,
+      ),
       controller: _scrollController,
       itemCount: itemCount,
       itemBuilder: (context, index) {
