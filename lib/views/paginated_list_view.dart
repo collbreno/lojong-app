@@ -39,7 +39,7 @@ class _PaginatedListViewState<T> extends State<PaginatedListView<T>> {
   Widget build(BuildContext context) {
     return BlocBuilder<PaginatedListCubit<T>, PaginatedListState<T>>(
       builder: (context, state) {
-        if (state.list.isNotEmpty) {
+        if (state.items.isNotEmpty) {
           return _buildList(state);
         } else if (state.isLoading) {
           return _buildLoadingIndicator();
@@ -53,14 +53,14 @@ class _PaginatedListViewState<T> extends State<PaginatedListView<T>> {
   }
 
   Widget _buildList(PaginatedListState<T> state) {
-    var itemCount = state.list.length;
+    var itemCount = state.items.length;
     if (state.isLoading) itemCount++;
     return ListView.builder(
       controller: _scrollController,
       itemCount: itemCount,
       itemBuilder: (context, index) {
-        if (index < state.list.length) {
-          return widget.itemBuilder(state.list[index]);
+        if (index < state.items.length) {
+          return widget.itemBuilder(state.items[index]);
         } else {
           return _buildListFooter();
         }

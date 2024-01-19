@@ -5,9 +5,7 @@ import 'package:lojong/models/list_result.dart';
 import 'package:lojong/models/quote.dart';
 
 typedef ArticleListCubit = PaginatedListCubit<ArticleSummaryModel>;
-typedef ArticleListState = PaginatedListState<ArticleSummaryModel>;
 typedef QuoteListCubit = PaginatedListCubit<QuoteModel>;
-typedef QuoteListState = PaginatedListState<QuoteModel>;
 
 class PaginatedListCubit<T> extends Cubit<PaginatedListState<T>> {
   final Future<ListResultModel<T>> Function(int page) repositoryMethod;
@@ -20,7 +18,6 @@ class PaginatedListCubit<T> extends Cubit<PaginatedListState<T>> {
     if (!state.hasMore || state.isLoading) {
       return;
     }
-    print('loading more!!!');
 
     final page = state.lastPage != null ? state.lastPage! + 1 : 0;
     emit(state.loading());

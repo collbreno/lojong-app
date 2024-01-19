@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lojong/bloc/paginated_list_cubit.dart';
+import 'package:lojong/bloc/simple_list_cubit.dart';
 import 'package:lojong/repositories/app_repository.dart';
 import 'package:lojong/views/articles_tab.dart';
 import 'package:lojong/views/quotes_tab.dart';
@@ -44,6 +45,11 @@ class _HomePageState extends State<HomePage> {
               BlocProvider<QuoteListCubit>(
                 create: (context) => QuoteListCubit(
                   context.read<AppRepository>().listQuotes,
+                ),
+              ),
+              BlocProvider<VideoListCubit>(
+                create: (context) => VideoListCubit(
+                  context.read<AppRepository>().listVideos,
                 ),
               ),
             ],

@@ -2,14 +2,14 @@ import 'package:equatable/equatable.dart';
 import 'package:lojong/models/list_result.dart';
 
 class PaginatedListState<T> extends Equatable {
-  final List<T> list;
+  final List<T> items;
   final bool isLoading;
   final bool hasMore;
   final Object? lastError;
   final int? lastPage;
 
   const PaginatedListState._({
-    required this.list,
+    required this.items,
     required this.isLoading,
     required this.hasMore,
     required this.lastError,
@@ -17,7 +17,7 @@ class PaginatedListState<T> extends Equatable {
   });
 
   PaginatedListState.initialState()
-      : list = [],
+      : items = [],
         isLoading = false,
         hasMore = true,
         lastPage = null,
@@ -25,7 +25,7 @@ class PaginatedListState<T> extends Equatable {
 
   PaginatedListState<T> addResult(ListResultModel<T> result) {
     return PaginatedListState._(
-      list: list + result.items,
+      items: items + result.items,
       isLoading: false,
       hasMore: result.hasMore,
       lastError: null,
@@ -35,7 +35,7 @@ class PaginatedListState<T> extends Equatable {
 
   PaginatedListState<T> loading() {
     return PaginatedListState._(
-      list: list,
+      items: items,
       isLoading: true,
       hasMore: hasMore,
       lastError: null,
@@ -45,7 +45,7 @@ class PaginatedListState<T> extends Equatable {
 
   PaginatedListState<T> withError(Object error) {
     return PaginatedListState._(
-      list: list,
+      items: items,
       isLoading: false,
       hasMore: hasMore,
       lastError: error,
@@ -54,5 +54,5 @@ class PaginatedListState<T> extends Equatable {
   }
 
   @override
-  List<Object?> get props => [list, isLoading, hasMore, lastError, lastPage];
+  List<Object?> get props => [items, isLoading, hasMore, lastError, lastPage];
 }
