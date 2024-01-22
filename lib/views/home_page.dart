@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -31,35 +30,30 @@ class _HomePageState extends State<HomePage> {
           ),
           bottom: const AppTabBar(),
         ),
-        body: RepositoryProvider(
-          create: (context) => AppRepository(
-            Dio(BaseOptions(headers: AppRepository.baseHeaders)),
-          ),
-          child: MultiBlocProvider(
-            providers: [
-              BlocProvider<ArticleListCubit>(
-                create: (context) => ArticleListCubit(
-                  context.read<AppRepository>().listArticles,
-                ),
+        body: MultiBlocProvider(
+          providers: [
+            BlocProvider<ArticleListCubit>(
+              create: (context) => ArticleListCubit(
+                context.read<AppRepository>().listArticles,
               ),
-              BlocProvider<QuoteListCubit>(
-                create: (context) => QuoteListCubit(
-                  context.read<AppRepository>().listQuotes,
-                ),
-              ),
-              BlocProvider<VideoListCubit>(
-                create: (context) => VideoListCubit(
-                  context.read<AppRepository>().listVideos,
-                ),
-              ),
-            ],
-            child: const TabBarView(
-              children: [
-                VideosTab(),
-                ArticlesTab(),
-                QuotesTab(),
-              ],
             ),
+            BlocProvider<QuoteListCubit>(
+              create: (context) => QuoteListCubit(
+                context.read<AppRepository>().listQuotes,
+              ),
+            ),
+            BlocProvider<VideoListCubit>(
+              create: (context) => VideoListCubit(
+                context.read<AppRepository>().listVideos,
+              ),
+            ),
+          ],
+          child: const TabBarView(
+            children: [
+              VideosTab(),
+              ArticlesTab(),
+              QuotesTab(),
+            ],
           ),
         ),
       ),

@@ -6,6 +6,7 @@ typedef VideoListCubit = SimpleListCubit<VideoModel>;
 
 class SimpleListCubit<T> extends Cubit<SimpleListState<T>> {
   final Future<List<T>> Function() repositoryMethod;
+
   SimpleListCubit(this.repositoryMethod) : super(SuccessfulState(const [])) {
     load();
   }
@@ -17,6 +18,7 @@ class SimpleListCubit<T> extends Cubit<SimpleListState<T>> {
       emit(SuccessfulState(result));
     } on Exception catch (error) {
       emit(ErrorState(error));
+      rethrow;
     }
   }
 }

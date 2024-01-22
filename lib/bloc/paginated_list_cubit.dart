@@ -9,6 +9,7 @@ typedef QuoteListCubit = PaginatedListCubit<QuoteModel>;
 
 class PaginatedListCubit<T> extends Cubit<PaginatedListState<T>> {
   final Future<ListResultModel<T>> Function(int page) repositoryMethod;
+
   PaginatedListCubit(this.repositoryMethod)
       : super(PaginatedListState.initialState()) {
     loadMore();
@@ -26,6 +27,7 @@ class PaginatedListCubit<T> extends Cubit<PaginatedListState<T>> {
       emit(state.addResult(result));
     } on Exception catch (error) {
       emit(state.withError(error));
+      rethrow;
     }
   }
 }

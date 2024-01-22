@@ -1,6 +1,6 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lojong/widgets/image_card.dart';
 
 class ListItem extends StatelessWidget {
   final String title;
@@ -21,18 +21,21 @@ class ListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const SizedBox(height: 20),
-        _buildTitle(),
-        const SizedBox(height: 10),
-        _buildContent(),
-        const SizedBox(height: 10),
-        _buildText(),
-        const SizedBox(height: 12),
-        _buildShareButton(),
-        const SizedBox(height: 18),
-      ],
+    return GestureDetector(
+      onTap: onItemPressed,
+      child: Column(
+        children: [
+          const SizedBox(height: 20),
+          _buildTitle(),
+          const SizedBox(height: 10),
+          _buildContent(),
+          const SizedBox(height: 10),
+          _buildText(),
+          const SizedBox(height: 12),
+          _buildShareButton(),
+          const SizedBox(height: 18),
+        ],
+      ),
     );
   }
 
@@ -54,31 +57,12 @@ class ListItem extends StatelessWidget {
   Widget _buildContent() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 26),
-      child: AspectRatio(
-        aspectRatio: 19 / 10,
-        child: Stack(
-          fit: StackFit.passthrough,
-          alignment: Alignment.center,
-          children: [
-            _buildImageCard(),
-            if (centeredIcon != null) centeredIcon!,
-          ],
-        ),
-      ),
-    );
-  }
-
-  Card _buildImageCard() {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-      ),
-      clipBehavior: Clip.antiAlias,
-      child: CachedNetworkImage(
-        imageUrl: imageUrl,
-        fit: BoxFit.cover,
-        placeholder: (context, url) => Container(color: Colors.grey.shade300),
-        errorWidget: (context, url, error) => const Icon(Icons.error),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          ImageCard(imageUrl),
+          if (centeredIcon != null) centeredIcon!,
+        ],
       ),
     );
   }
