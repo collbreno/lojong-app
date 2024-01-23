@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:lojong/style/button_styles.dart';
 
 class ShareButton extends StatelessWidget {
   final VoidCallback onPressed;
-  final Color? foregroundColor;
-  final Color? backgroundColor;
+  final ButtonStyle? buttonStyle;
   const ShareButton({
     required this.onPressed,
-    this.foregroundColor,
-    this.backgroundColor,
+    this.buttonStyle,
     super.key,
   });
 
@@ -18,20 +16,7 @@ class ShareButton extends StatelessWidget {
       icon: const Icon(Icons.share, size: 18),
       onPressed: onPressed,
       label: const Text('Compartilhar'),
-      style: ButtonStyle(
-        textStyle: MaterialStatePropertyAll(
-          GoogleFonts.asap(
-            fontWeight: FontWeight.w700,
-            fontSize: 12,
-          ),
-        ),
-        backgroundColor: MaterialStatePropertyAll(
-          backgroundColor ?? Theme.of(context).colorScheme.tertiary,
-        ),
-        foregroundColor: MaterialStatePropertyAll(
-          foregroundColor ?? Theme.of(context).colorScheme.onTertiary,
-        ),
-      ),
+      style: buttonStyle ?? ButtonStyles.tertiary(context),
     );
   }
 }

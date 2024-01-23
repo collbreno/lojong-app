@@ -5,18 +5,18 @@ import 'package:lojong/models/article_content.dart';
 typedef ArticleItemCubit = ModelItemCubit<ArticleContentModel>;
 
 class ModelItemCubit<T> extends Cubit<ModelItemState<T>> {
-  final Future<T> Function() repositoryMethod;
+  final Future<T> Function() _repositoryMethod;
 
-  ModelItemCubit(this.repositoryMethod) : super(LoadingState()) {
+  ModelItemCubit(this._repositoryMethod) : super(LoadingState()) {
     load();
   }
 
   void load() async {
     emit(LoadingState());
     try {
-      final result = await repositoryMethod();
+      final result = await _repositoryMethod();
       emit(SuccessfulState(result));
-    } on Exception catch (error) {
+    } catch (error) {
       emit(ErrorState(error));
       rethrow;
     }

@@ -5,18 +5,18 @@ import 'package:lojong/models/video.dart';
 typedef VideoListCubit = SimpleListCubit<VideoModel>;
 
 class SimpleListCubit<T> extends Cubit<SimpleListState<T>> {
-  final Future<List<T>> Function() repositoryMethod;
+  final Future<List<T>> Function() _repositoryMethod;
 
-  SimpleListCubit(this.repositoryMethod) : super(SuccessfulState(const [])) {
+  SimpleListCubit(this._repositoryMethod) : super(SuccessfulState(const [])) {
     load();
   }
 
   void load() async {
     emit(LoadingState<T>());
     try {
-      final result = await repositoryMethod();
+      final result = await _repositoryMethod();
       emit(SuccessfulState(result));
-    } on Exception catch (error) {
+    } catch (error) {
       emit(ErrorState(error));
       rethrow;
     }

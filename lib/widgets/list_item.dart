@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lojong/style/button_styles.dart';
 import 'package:lojong/widgets/image_card.dart';
 import 'package:lojong/widgets/share_button.dart';
 
@@ -86,8 +87,7 @@ class ListItem extends StatelessWidget {
   Widget _buildShareButton() {
     return ShareButton(
       onPressed: onSharePressed,
-      foregroundColor: const Color.fromRGBO(128, 132, 143, 1),
-      backgroundColor: const Color.fromRGBO(236, 236, 236, 1),
+      buttonStyle: ButtonStyles.grey(),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lojong/bloc/simple_list_cubit.dart';
 import 'package:lojong/bloc/simple_list_state.dart';
+import 'package:lojong/widgets/app_error_widget.dart';
 
 class SimpleListView<T> extends StatelessWidget {
   final Widget Function(T item) itemBuilder;
@@ -11,11 +12,14 @@ class SimpleListView<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<SimpleListCubit<T>, SimpleListState<T>>(
-      builder: (context, state) {
+      builder: (context2, state) {
         if (state is LoadingState<T>) {
           return _buildLoadingIndicator();
         } else if (state is ErrorState<T>) {
-          return _buildError(state.error);
+          return _buildError(
+            state.error,
+            () => context.read<SimpleListCubit<T>>().load(),
+          );
         } else if (state is SuccessfulState<T>) {
           if (state.items.isNotEmpty) {
             return _buildList(state.items);
@@ -33,8 +37,10 @@ class SimpleListView<T> extends StatelessWidget {
     return const Center(child: CircularProgressIndicator());
   }
 
-  Widget _buildError(Object? error) {
-    return const Center(child: Text('Algo deu errado'));
+  Widget _buildError(Object? error, VoidCallback retry) {
+    return Center(
+      child: AppErrorWidget(retry: retry),
+    );
   }
 
   Widget _buildEmptyList() {

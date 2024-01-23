@@ -8,9 +8,9 @@ typedef ArticleListCubit = PaginatedListCubit<ArticleSummaryModel>;
 typedef QuoteListCubit = PaginatedListCubit<QuoteModel>;
 
 class PaginatedListCubit<T> extends Cubit<PaginatedListState<T>> {
-  final Future<ListResultModel<T>> Function(int page) repositoryMethod;
+  final Future<ListResultModel<T>> Function(int page) _repositoryMethod;
 
-  PaginatedListCubit(this.repositoryMethod)
+  PaginatedListCubit(this._repositoryMethod)
       : super(PaginatedListState.initialState()) {
     loadMore();
   }
@@ -23,9 +23,9 @@ class PaginatedListCubit<T> extends Cubit<PaginatedListState<T>> {
     final page = state.lastPage != null ? state.lastPage! + 1 : 0;
     emit(state.loading());
     try {
-      final result = await repositoryMethod(page);
+      final result = await _repositoryMethod(page);
       emit(state.addResult(result));
-    } on Exception catch (error) {
+    } catch (error) {
       emit(state.withError(error));
       rethrow;
     }
