@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
@@ -23,6 +24,9 @@ class AppTheme {
       ),
     ).copyWith(
       appBarTheme: AppBarTheme(
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+        ),
         elevation: 0,
         centerTitle: true,
         titleTextStyle: GoogleFonts.asap(

@@ -3,6 +3,7 @@ import 'package:lojong/models/video.dart';
 import 'package:lojong/utils/share_utils.dart';
 import 'package:lojong/views/simple_list_view.dart';
 import 'package:lojong/widgets/list_item.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class VideosTab extends StatelessWidget {
   const VideosTab({super.key});
@@ -15,7 +16,7 @@ class VideosTab extends StatelessWidget {
           title: video.name,
           text: video.description,
           imageUrl: video.imageUrl,
-          onItemPressed: () {},
+          onItemPressed: () => launchUrl(Uri.parse(video.videoUrl)),
           onSharePressed: () => ShareUtils.shareVideo(video),
           centeredIcon: _buildPlayButton(context),
         );
@@ -24,10 +25,11 @@ class VideosTab extends StatelessWidget {
   }
 
   Widget _buildPlayButton(BuildContext context) {
+    const buttonSize = 52.0;
     return Center(
       child: Container(
-        width: 45,
-        height: 45,
+        width: buttonSize,
+        height: buttonSize,
         decoration: BoxDecoration(
           color: Theme.of(context).primaryColor,
           borderRadius: BorderRadius.circular(50),
