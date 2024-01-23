@@ -10,7 +10,7 @@ class AuthorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: const Color.fromRGBO(235, 235, 235, 1),
         borderRadius: BorderRadius.circular(10),
@@ -38,9 +38,9 @@ class AuthorWidget extends StatelessWidget {
     return Text(
       author.description,
       style: GoogleFonts.asap(
-        color: const Color.fromRGBO(0, 0, 0, 0.4),
+        color: Colors.black54,
         fontWeight: FontWeight.w400,
-        fontSize: 9,
+        fontSize: 12,
       ),
     );
   }
@@ -49,18 +49,19 @@ class AuthorWidget extends StatelessWidget {
     return Text(
       author.name,
       style: GoogleFonts.asap(
-        color: const Color.fromRGBO(0, 0, 0, 0.4),
+        color: Colors.black54,
         fontWeight: FontWeight.w600,
-        fontSize: 10,
+        fontSize: 13,
       ),
     );
   }
 
   Container _buildImage() {
+    const imageSize = 54.0;
     return Container(
-      width: 35,
-      height: 35,
-      margin: const EdgeInsets.only(right: 10),
+      width: imageSize,
+      height: imageSize,
+      margin: const EdgeInsets.only(right: 12),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(100)),
       clipBehavior: Clip.antiAlias,
       child: CachedNetworkImage(

@@ -41,11 +41,11 @@ class ArticlePage extends StatelessWidget {
     return ListView(
       children: [
         const SizedBox(height: 16),
+        _buildTitle(article.title, context),
+        const SizedBox(height: 12),
         _buildImage(article.imageUrl),
-        const SizedBox(height: 26),
-        _buildTitle(article.title),
         const SizedBox(height: 10),
-        _buildFullText(article.fullText, Theme.of(context).colorScheme.primary),
+        _buildFullText(article.fullText, context),
         const SizedBox(height: 16),
         _buildAuthorWidget(article.author),
         const SizedBox(height: 18),
@@ -62,14 +62,14 @@ class ArticlePage extends StatelessWidget {
     );
   }
 
-  Widget _buildTitle(String title) {
+  Widget _buildTitle(String title, BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 28),
       child: Text(
         title,
         textAlign: TextAlign.center,
         style: GoogleFonts.asap(
-          color: const Color.fromRGBO(0, 0, 0, 0.55),
+          color: Theme.of(context).colorScheme.onBackground,
           fontWeight: FontWeight.w600,
           fontSize: 18,
         ),
@@ -77,20 +77,19 @@ class ArticlePage extends StatelessWidget {
     );
   }
 
-  Widget _buildFullText(String fullText, Color linkColor) {
+  Widget _buildFullText(String fullText, BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 28.0),
       child: Html(
         data: fullText,
         style: {
           "body": Style(
-            fontSize: FontSize(13),
+            fontSize: FontSize(14),
             fontWeight: FontWeight.w400,
-            color: const Color.fromRGBO(128, 132, 143, 1),
-            fontFamily: 'Asap',
+            color: Theme.of(context).colorScheme.onBackground,
           ),
           "a": Style(
-            color: linkColor,
+            color: Theme.of(context).colorScheme.primary,
           ),
         },
       ),

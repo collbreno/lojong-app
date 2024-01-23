@@ -27,7 +27,7 @@ class AppTheme {
         centerTitle: true,
         titleTextStyle: GoogleFonts.asap(
           fontWeight: FontWeight.w700,
-          fontSize: 14,
+          fontSize: 16,
         ),
       ),
       cardTheme: CardTheme(
@@ -47,7 +47,6 @@ class AppTheme {
           textStyle: MaterialStatePropertyAll(
             GoogleFonts.asap(
               fontWeight: FontWeight.w700,
-              fontSize: 12,
             ),
           ),
           shape: MaterialStatePropertyAll(
