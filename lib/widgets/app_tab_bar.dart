@@ -6,19 +6,20 @@ class AppTabBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Container(
       padding: const EdgeInsets.all(4),
       margin: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
-        color: Colors.blue,
+        color: scheme.secondary,
       ),
       child: Material(
         color: Colors.transparent,
         child: TabBar(
-          dividerColor: Colors.yellow,
-          labelColor: Colors.pink,
-          unselectedLabelColor: Colors.white,
+          labelColor: scheme.secondary,
+          unselectedLabelColor: scheme.onSecondary,
           splashBorderRadius: BorderRadius.circular(100),
           labelStyle: GoogleFonts.asap(
             fontWeight: FontWeight.w700,
@@ -26,7 +27,7 @@ class AppTabBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           indicator: BoxDecoration(
             borderRadius: BorderRadius.circular(100),
-            color: Colors.white,
+            color: scheme.onSecondary,
           ),
           tabs: const [
             Tab(text: 'VÍDEOS', height: 36),

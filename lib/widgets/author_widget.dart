@@ -60,7 +60,7 @@ class AuthorWidget extends StatelessWidget {
     return Container(
       width: 35,
       height: 35,
-      padding: const EdgeInsets.only(right: 10),
+      margin: const EdgeInsets.only(right: 10),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(100)),
       clipBehavior: Clip.antiAlias,
       child: CachedNetworkImage(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lojong/bloc/paginated_list_cubit.dart';
 import 'package:lojong/bloc/simple_list_cubit.dart';
 import 'package:lojong/repositories/app_repository.dart';
@@ -23,11 +22,7 @@ class _HomePageState extends State<HomePage> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          centerTitle: true,
-          title: Text(
-            'INSPIRAÇÕES',
-            style: GoogleFonts.asap(fontWeight: FontWeight.w700, fontSize: 14),
-          ),
+          title: const Text('INSPIRAÇÕES'),
           bottom: const AppTabBar(),
         ),
         body: MultiBlocProvider(

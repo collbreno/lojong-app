@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lojong/app_theme.dart';
 import 'package:lojong/repositories/app_repository.dart';
 import 'package:lojong/views/home_page.dart';
 
@@ -19,10 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       child: MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink),
-          useMaterial3: false,
-        ),
+        theme: AppTheme.createTheme(),
         home: const HomePage(),
       ),
     );

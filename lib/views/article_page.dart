@@ -7,6 +7,7 @@ import 'package:lojong/models/article_content.dart';
 import 'package:lojong/models/author.dart';
 import 'package:lojong/repositories/app_repository.dart';
 import 'package:lojong/views/model_item_view.dart';
+import 'package:lojong/widgets/app_back_button.dart';
 import 'package:lojong/widgets/author_widget.dart';
 import 'package:lojong/widgets/image_card.dart';
 
@@ -22,19 +23,20 @@ class ArticlePage extends StatelessWidget {
       ),
       child: Scaffold(
         appBar: AppBar(
-          title: Text('INSPIRAÇÕES'),
-          centerTitle: true,
+          automaticallyImplyLeading: false,
+          leading: const AppBackButton(),
+          title: const Text('INSPIRAÇÕES'),
         ),
         body: ModelItemView<ArticleContentModel>(
           itemBuilder: (item) {
-            return _buildArticle(item);
+            return _buildArticle(item, context);
           },
         ),
       ),
     );
   }
 
-  Widget _buildArticle(ArticleContentModel article) {
+  Widget _buildArticle(ArticleContentModel article, BuildContext context) {
     return ListView(
       children: [
         const SizedBox(height: 16),
@@ -42,7 +44,7 @@ class ArticlePage extends StatelessWidget {
         const SizedBox(height: 26),
         _buildTitle(article.title),
         const SizedBox(height: 10),
-        _buildFullText(article.fullText),
+        _buildFullText(article.fullText, Theme.of(context).colorScheme.primary),
         const SizedBox(height: 16),
         _buildAuthorWidget(article.author),
         const SizedBox(height: 18),
@@ -74,7 +76,7 @@ class ArticlePage extends StatelessWidget {
     );
   }
 
-  Widget _buildFullText(String fullText) {
+  Widget _buildFullText(String fullText, Color linkColor) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 28.0),
       child: Html(
@@ -87,7 +89,7 @@ class ArticlePage extends StatelessWidget {
             fontFamily: 'Asap',
           ),
           "a": Style(
-            color: Color.fromRGBO(216, 138, 161, 1),
+            color: linkColor,
           ),
         },
       ),
@@ -102,6 +104,9 @@ class ArticlePage extends StatelessWidget {
   }
 
   Widget _buildShareButton() {
-    return ElevatedButton(onPressed: () {}, child: Text('COMPARTILHAR'));
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 26),
+      child: ElevatedButton(onPressed: () {}, child: Text('COMPARTILHAR')),
+    );
   }
 }
