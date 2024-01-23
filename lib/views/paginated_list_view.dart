@@ -5,7 +5,12 @@ import 'package:lojong/bloc/paginated_list_state.dart';
 
 class PaginatedListView<T> extends StatefulWidget {
   final Widget Function(T item) itemBuilder;
-  const PaginatedListView({required this.itemBuilder, super.key});
+  final bool showSeparator;
+  const PaginatedListView({
+    required this.itemBuilder,
+    this.showSeparator = false,
+    super.key,
+  });
 
   @override
   State<PaginatedListView<T>> createState() => _PaginatedListViewState<T>();
@@ -55,18 +60,41 @@ class _PaginatedListViewState<T> extends State<PaginatedListView<T>> {
   Widget _buildList(PaginatedListState<T> state) {
     var itemCount = state.items.length;
     if (state.isLoading) itemCount++;
-    return ListView.separated(
-      separatorBuilder: (context, index) => const Divider(),
-      controller: _scrollController,
-      itemCount: itemCount,
-      itemBuilder: (context, index) {
-        if (index < state.items.length) {
-          return widget.itemBuilder(state.items[index]);
-        } else {
-          return _buildListFooter();
-        }
-      },
-    );
+
+    if (widget.showSeparator) {
+      return ListView.separated(
+        separatorBuilder: (context, index) => const Divider(),
+        controller: _scrollController,
+        itemCount: itemCount,
+        itemBuilder: (context, index) => _itemBuilderWithFooter(
+          state: state,
+          context: context,
+          index: index,
+        ),
+      );
+    } else {
+      return ListView.builder(
+        controller: _scrollController,
+        itemCount: itemCount,
+        itemBuilder: (context, index) => _itemBuilderWithFooter(
+          state: state,
+          context: context,
+          index: index,
+        ),
+      );
+    }
+  }
+
+  Widget _itemBuilderWithFooter({
+    required PaginatedListState<T> state,
+    required BuildContext context,
+    required int index,
+  }) {
+    if (index < state.items.length) {
+      return widget.itemBuilder(state.items[index]);
+    } else {
+      return _buildListFooter();
+    }
   }
 
   Widget _buildListFooter() {

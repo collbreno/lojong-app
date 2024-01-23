@@ -30,6 +30,11 @@ class AppTheme {
           fontSize: 14,
         ),
       ),
+      cardTheme: CardTheme(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+      ),
       dividerTheme: const DividerThemeData(
         space: 2,
         color: Color.fromRGBO(151, 151, 151, 1),

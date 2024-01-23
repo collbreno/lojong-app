@@ -10,6 +10,7 @@ class ArticlesTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PaginatedListView<ArticleSummaryModel>(
+      showSeparator: true,
       itemBuilder: (item) {
         return ListItem(
           title: item.title,

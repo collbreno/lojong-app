@@ -10,9 +10,6 @@ class ImageCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 19 / 10,
       child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
         clipBehavior: Clip.antiAlias,
         child: CachedNetworkImage(
           imageUrl: imageUrl,

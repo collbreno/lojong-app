@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lojong/widgets/image_card.dart';
+import 'package:lojong/widgets/share_button.dart';
 
 class ListItem extends StatelessWidget {
   final String title;
@@ -83,29 +84,10 @@ class ListItem extends StatelessWidget {
   }
 
   Widget _buildShareButton() {
-    return ElevatedButton.icon(
-      style: ButtonStyle(
-        maximumSize: const MaterialStatePropertyAll(Size(140, 28)),
-        minimumSize: const MaterialStatePropertyAll(Size(140, 28)),
-        shape: MaterialStatePropertyAll(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(100),
-          ),
-        ),
-        elevation: const MaterialStatePropertyAll(0),
-        foregroundColor: const MaterialStatePropertyAll(
-          Color.fromRGBO(128, 132, 143, 1),
-        ),
-        backgroundColor: const MaterialStatePropertyAll(
-          Color.fromRGBO(236, 236, 236, 1),
-        ),
-      ),
-      onPressed: onSharePressed,
-      icon: const Icon(Icons.share, size: 18),
-      label: Text(
-        'Compartilhar',
-        style: GoogleFonts.asap(fontSize: 14, fontWeight: FontWeight.w700),
-      ),
+    return ShareButton(
+      onPressed: () {},
+      foregroundColor: const Color.fromRGBO(128, 132, 143, 1),
+      backgroundColor: const Color.fromRGBO(236, 236, 236, 1),
     );
   }
 }
