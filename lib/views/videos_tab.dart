@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lojong/models/video.dart';
+import 'package:lojong/utils/share_utils.dart';
 import 'package:lojong/views/simple_list_view.dart';
 import 'package:lojong/widgets/list_item.dart';
 
@@ -15,7 +16,7 @@ class VideosTab extends StatelessWidget {
           text: video.description,
           imageUrl: video.imageUrl,
           onItemPressed: () {},
-          onSharePressed: () {},
+          onSharePressed: () => ShareUtils.shareVideo(video),
           centeredIcon: _buildPlayButton(context),
         );
       },

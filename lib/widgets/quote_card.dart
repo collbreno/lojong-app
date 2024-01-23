@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lojong/models/quote.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:lojong/utils/share_utils.dart';
 import 'package:lojong/widgets/share_button.dart';
 
 class QuoteCard extends StatelessWidget {
@@ -48,7 +49,7 @@ class QuoteCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 18),
                   ShareButton(
-                    onPressed: () {},
+                    onPressed: () => ShareUtils.shareQuote(quote),
                   ),
                   const SizedBox(height: 12),
                 ],

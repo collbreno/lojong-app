@@ -6,6 +6,7 @@ import 'package:lojong/bloc/model_item_cubit.dart';
 import 'package:lojong/models/article_content.dart';
 import 'package:lojong/models/author.dart';
 import 'package:lojong/repositories/app_repository.dart';
+import 'package:lojong/utils/share_utils.dart';
 import 'package:lojong/views/model_item_view.dart';
 import 'package:lojong/widgets/app_back_button.dart';
 import 'package:lojong/widgets/author_widget.dart';
@@ -48,7 +49,7 @@ class ArticlePage extends StatelessWidget {
         const SizedBox(height: 16),
         _buildAuthorWidget(article.author),
         const SizedBox(height: 18),
-        _buildShareButton(),
+        _buildShareButton(article),
         const SizedBox(height: 30),
       ],
     );
@@ -103,10 +104,13 @@ class ArticlePage extends StatelessWidget {
     );
   }
 
-  Widget _buildShareButton() {
+  Widget _buildShareButton(ArticleContentModel article) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 26),
-      child: ElevatedButton(onPressed: () {}, child: Text('COMPARTILHAR')),
+      child: ElevatedButton(
+        onPressed: () => ShareUtils.shareArticleContent(article),
+        child: Text('COMPARTILHAR'),
+      ),
     );
   }
 }

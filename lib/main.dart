@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lojong/app_theme.dart';
+import 'package:lojong/style/app_theme.dart';
 import 'package:lojong/repositories/app_repository.dart';
 import 'package:lojong/views/home_page.dart';
 

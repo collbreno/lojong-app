@@ -85,7 +85,7 @@ class ListItem extends StatelessWidget {
 
   Widget _buildShareButton() {
     return ShareButton(
-      onPressed: () {},
+      onPressed: onSharePressed,
       foregroundColor: const Color.fromRGBO(128, 132, 143, 1),
       backgroundColor: const Color.fromRGBO(236, 236, 236, 1),
     );
