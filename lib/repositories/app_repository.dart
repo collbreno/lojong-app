@@ -13,11 +13,6 @@ class AppRepository implements IAppRepository {
   static const listQuotesPath = '$_baseUrl/quotes2';
   static const listVideosPath = '$_baseUrl/videos';
 
-  static const baseHeaders = {
-    'Authorization':
-        'Bearer O7Kw5E2embxod5YtL1h1YsGNN7FFN8wIxPYMg6J9zFjE6Th9oDssEsFLVhxf',
-  };
-
   final Dio dio;
 
   AppRepository(this.dio);

@@ -7,19 +7,19 @@ import 'package:lojong/models/list_result.dart';
 import 'package:lojong/models/quote.dart';
 import 'package:lojong/models/video.dart';
 import 'package:lojong/repositories/app_repository.dart';
+import 'package:lojong/utils/dio_utils.dart';
 
 import '../fixtures/article_content.dart';
 import '../fixtures/article_list.dart';
 import '../fixtures/quote_list.dart';
 import '../fixtures/video_list.dart';
 
-// TODO: testar os parametros recebidos
 void main() {
   late Dio dio;
   late DioAdapter dioAdapter;
 
   setUp(() {
-    dio = Dio(BaseOptions(headers: AppRepository.baseHeaders));
+    dio = Dio(DioUtils.getBaseOptions());
     dioAdapter = DioAdapter(dio: Dio());
   });
 
