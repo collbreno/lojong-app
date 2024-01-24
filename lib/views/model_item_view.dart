@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lojong/bloc/model_item_cubit.dart';
-import 'package:lojong/bloc/model_item_state.dart';
+import 'package:lojong/widgets/app_error_widget.dart';
 
 class ModelItemView<T> extends StatelessWidget {
   final Widget Function(T item) itemBuilder;
@@ -15,7 +15,7 @@ class ModelItemView<T> extends StatelessWidget {
         if (state is LoadingState<T>) {
           return _buildLoadingIndicator();
         } else if (state is ErrorState<T>) {
-          return _buildError();
+          return _buildError(context, state.error);
         } else if (state is SuccessfulState<T>) {
           return itemBuilder(state.item);
         } else {
@@ -29,7 +29,9 @@ class ModelItemView<T> extends StatelessWidget {
     return const Center(child: CircularProgressIndicator());
   }
 
-  Widget _buildError() {
-    return const Center(child: Text('Algo deu errado'));
+  Widget _buildError(BuildContext context, Object? error) {
+    return Center(
+      child: AppErrorWidget(retry: context.read<ModelItemCubit<T>>().load),
+    );
   }
 }

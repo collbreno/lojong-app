@@ -21,7 +21,7 @@ class ArticlePage extends StatelessWidget {
     return BlocProvider<ArticleItemCubit>(
       create: (context) => ArticleItemCubit(
         () => context.read<AppRepository>().getArticle(articleId),
-      ),
+      )..load(),
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,

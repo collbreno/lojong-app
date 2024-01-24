@@ -1,4 +1,4 @@
-import 'package:equatable/equatable.dart';
+part of 'model_item_cubit.dart';
 
 abstract class ModelItemState<T> extends Equatable {}
 

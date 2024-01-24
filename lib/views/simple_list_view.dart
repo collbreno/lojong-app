@@ -16,10 +16,7 @@ class SimpleListView<T> extends StatelessWidget {
         if (state is LoadingState<T>) {
           return _buildLoadingIndicator();
         } else if (state is ErrorState<T>) {
-          return _buildError(
-            state.error,
-            () => context.read<SimpleListCubit<T>>().load(),
-          );
+          return _buildError(context, state.error);
         } else if (state is SuccessfulState<T>) {
           if (state.items.isNotEmpty) {
             return _buildList(state.items);
@@ -37,9 +34,9 @@ class SimpleListView<T> extends StatelessWidget {
     return const Center(child: CircularProgressIndicator());
   }
 
-  Widget _buildError(Object? error, VoidCallback retry) {
+  Widget _buildError(BuildContext context, Object? error) {
     return Center(
-      child: AppErrorWidget(retry: retry),
+      child: AppErrorWidget(retry: context.read<SimpleListCubit<T>>().load),
     );
   }
 
