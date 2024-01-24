@@ -33,17 +33,17 @@ class VideosTab extends StatelessWidget {
         decoration: BoxDecoration(
           color: Theme.of(context).primaryColor,
           borderRadius: BorderRadius.circular(50),
-          border: const Border.fromBorderSide(
+          border: Border.fromBorderSide(
             BorderSide(
               width: 5,
-              color: Colors.white,
+              color: Theme.of(context).colorScheme.onPrimary,
             ),
           ),
         ),
         alignment: Alignment.center,
-        child: const Icon(
+        child: Icon(
           Icons.play_arrow,
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.onPrimary,
         ),
       ),
     );

@@ -12,7 +12,7 @@ class AuthorWidget extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: const Color.fromRGBO(235, 235, 235, 1),
+        color: Theme.of(context).colorScheme.primaryContainer,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
@@ -23,8 +23,8 @@ class AuthorWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                _buildName(),
-                if (author.description != null) _buildDescription(),
+                _buildName(context),
+                if (author.description != null) _buildDescription(context),
               ],
             ),
           ),
@@ -33,13 +33,13 @@ class AuthorWidget extends StatelessWidget {
     );
   }
 
-  Widget _buildDescription() {
+  Widget _buildDescription(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 5),
       child: Text(
         author.description!,
         style: GoogleFonts.asap(
-          color: Colors.black54,
+          color: Theme.of(context).colorScheme.onPrimaryContainer,
           fontWeight: FontWeight.w400,
           fontSize: 12,
         ),
@@ -47,11 +47,11 @@ class AuthorWidget extends StatelessWidget {
     );
   }
 
-  Text _buildName() {
+  Text _buildName(BuildContext context) {
     return Text(
       author.name,
       style: GoogleFonts.asap(
-        color: Colors.black54,
+        color: Theme.of(context).colorScheme.onPrimaryContainer,
         fontWeight: FontWeight.w600,
         fontSize: 13,
       ),

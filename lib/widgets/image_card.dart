@@ -14,7 +14,9 @@ class ImageCard extends StatelessWidget {
         child: CachedNetworkImage(
           imageUrl: imageUrl,
           fit: BoxFit.cover,
-          placeholder: (context, url) => Container(color: Colors.grey.shade300),
+          placeholder: (context, url) => Container(
+            color: Theme.of(context).colorScheme.primaryContainer,
+          ),
           errorWidget: (context, url, error) => const Icon(Icons.error),
         ),
       ),

@@ -28,20 +28,20 @@ class ListItem extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 20),
-          _buildTitle(),
+          _buildTitle(context),
           const SizedBox(height: 10),
           _buildContent(),
           const SizedBox(height: 10),
-          _buildText(),
+          _buildText(context),
           const SizedBox(height: 12),
-          _buildShareButton(),
+          _buildShareButton(context),
           const SizedBox(height: 18),
         ],
       ),
     );
   }
 
-  Widget _buildTitle() {
+  Widget _buildTitle(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 34),
       child: Text(
@@ -50,7 +50,7 @@ class ListItem extends StatelessWidget {
         style: GoogleFonts.asap(
           fontWeight: FontWeight.w700,
           fontSize: 14,
-          color: const Color.fromRGBO(128, 132, 143, 1),
+          color: Theme.of(context).colorScheme.onBackground,
         ),
       ),
     );
@@ -69,7 +69,7 @@ class ListItem extends StatelessWidget {
     );
   }
 
-  Widget _buildText() {
+  Widget _buildText(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Text(
@@ -78,16 +78,16 @@ class ListItem extends StatelessWidget {
         style: GoogleFonts.asap(
           fontSize: 15,
           fontWeight: FontWeight.w400,
-          color: const Color.fromRGBO(128, 132, 143, 1),
+          color: Theme.of(context).colorScheme.onBackground,
         ),
       ),
     );
   }
 
-  Widget _buildShareButton() {
+  Widget _buildShareButton(BuildContext context) {
     return ShareButton(
       onPressed: onSharePressed,
-      buttonStyle: ButtonStyles.grey(),
+      buttonStyle: ButtonStyles.grey(context),
     );
   }
 }

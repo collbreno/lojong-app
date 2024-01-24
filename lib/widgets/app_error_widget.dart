@@ -36,7 +36,7 @@ class AppErrorWidget extends StatelessWidget {
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: retry,
-              style: ButtonStyles.grey(),
+              style: ButtonStyles.grey(context),
               child: const Text('Recarregar'),
             ),
           ],

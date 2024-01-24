@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
     final cacheOptions = CacheOptions(
       store: FileCacheStore(cacheDir.path),
       policy: CachePolicy.forceCache,
-      maxStale: const Duration(days: 7),
+      maxStale: const Duration(hours: 24),
     );
 
     dio.interceptors.add(ChuckerDioInterceptor());

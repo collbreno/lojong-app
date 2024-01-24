@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ButtonStyles {
   static ButtonStyle tertiary(BuildContext context) {
-    return grey().copyWith(
+    return grey(context).copyWith(
       backgroundColor: MaterialStatePropertyAll(
         Theme.of(context).colorScheme.tertiary,
       ),
@@ -13,7 +13,7 @@ class ButtonStyles {
     );
   }
 
-  static ButtonStyle grey() {
+  static ButtonStyle grey(BuildContext context) {
     return ButtonStyle(
       textStyle: MaterialStatePropertyAll(
         GoogleFonts.asap(
@@ -21,11 +21,11 @@ class ButtonStyles {
           fontSize: 12,
         ),
       ),
-      foregroundColor: const MaterialStatePropertyAll(
-        Color.fromRGBO(128, 132, 143, 1),
+      foregroundColor: MaterialStatePropertyAll(
+        Theme.of(context).colorScheme.onPrimaryContainer,
       ),
-      backgroundColor: const MaterialStatePropertyAll(
-        Color.fromRGBO(236, 236, 236, 1),
+      backgroundColor: MaterialStatePropertyAll(
+        Theme.of(context).colorScheme.primaryContainer,
       ),
     );
   }

@@ -7,7 +7,6 @@ class AppTheme {
     return ThemeData.from(
       useMaterial3: false,
       colorScheme: const ColorScheme(
-        // TODO: remove all Colors.fromRGBO from the code outside the theme
         brightness: Brightness.light,
         primary: Color.fromRGBO(224, 144, 144, 1),
         onPrimary: Color.fromRGBO(255, 255, 255, 1),
@@ -21,6 +20,8 @@ class AppTheme {
         background: Colors.white,
         onSurface: Color.fromRGBO(128, 132, 143, 1),
         onBackground: Color.fromRGBO(128, 132, 143, 1),
+        primaryContainer: Color.fromRGBO(236, 236, 236, 1),
+        onPrimaryContainer: Color.fromRGBO(128, 132, 143, 1),
       ),
     ).copyWith(
       appBarTheme: AppBarTheme(
