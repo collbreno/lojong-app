@@ -1,0 +1,32 @@
+{
+	"has_more": false,
+	"current_page": 1,
+	"last_page": 1,
+	"next_page": false,
+	"list": [
+		{
+			"id": 2359,
+			"text": "“Nem todo fim há de ser ruim haja vista o pôr-do-sol.”",
+			"author": "Saulo Pessato",
+			"order": 466
+		},
+		{
+			"id": 2365,
+			"text": "“O agora já é o futuro e já está aqui.”",
+			"author": "Jon Kabat-Zinn",
+			"order": 467
+		},
+		{
+			"id": 2367,
+			"text": "\"O caminho para a sabedoria é abrir o coração.”",
+			"author": "James Baraz",
+			"order": 468
+		},
+		{
+			"id": 2370,
+			"text": "“O estresse é causado por estar ‘aqui’, mas querer estar ‘lá’, ou estar no presente, mas querer estar no futuro.”",
+			"author": "Eckhart Tolle",
+			"order": 469
+		}
+	]
+}

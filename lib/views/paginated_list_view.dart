@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lojong/bloc/paginated_list_cubit.dart';
-import 'package:lojong/bloc/paginated_list_state.dart';
 
 class PaginatedListView<T> extends StatefulWidget {
   final Widget Function(T item) itemBuilder;

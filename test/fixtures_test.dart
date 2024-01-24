@@ -18,23 +18,39 @@ void main() {
       expect(fix.article, isA<ArticleContentModel>());
       expect(fix.responseData, isA<Map<String, dynamic>>());
     });
+
     test('testing $ArticleListFixture', () async {
       final fix = ArticleListFixture();
       await fix.init();
       expect(fix.listResult, isA<ListResultModel<ArticleSummaryModel>>());
+      expect(fix.listResult.hasMore, isTrue);
       expect(fix.responseData, isA<Map<String, dynamic>>());
+
+      expect(
+        fix.listResultLastPage,
+        isA<ListResultModel<ArticleSummaryModel>>(),
+      );
+      expect(fix.listResultLastPage.hasMore, isFalse);
+      expect(fix.responseDataLastPage, isA<Map<String, dynamic>>());
     });
+
     test('testing $VideoListFixture', () async {
       final fix = VideoListFixture();
       await fix.init();
       expect(fix.videos, isA<List<VideoModel>>());
       expect(fix.responseData, isA<List<dynamic>>());
     });
+
     test('testing $QuoteListFixture', () async {
       final fix = QuoteListFixture();
       await fix.init();
       expect(fix.listResult, isA<ListResultModel<QuoteModel>>());
+      expect(fix.listResult.hasMore, isTrue);
       expect(fix.responseData, isA<Map<String, dynamic>>());
+
+      expect(fix.listResultLastPage, isA<ListResultModel<QuoteModel>>());
+      expect(fix.listResultLastPage.hasMore, isFalse);
+      expect(fix.responseDataLastPage, isA<Map<String, dynamic>>());
     });
   });
 }

@@ -1,5 +1,4 @@
-import 'package:equatable/equatable.dart';
-import 'package:lojong/models/list_result.dart';
+part of 'paginated_list_cubit.dart';
 
 class PaginatedListState<T> extends Equatable {
   final List<T> items;
@@ -8,7 +7,8 @@ class PaginatedListState<T> extends Equatable {
   final Object? lastError;
   final int? lastPage;
 
-  const PaginatedListState._({
+  @visibleForTesting
+  const PaginatedListState({
     required this.items,
     required this.isLoading,
     required this.hasMore,
@@ -24,7 +24,7 @@ class PaginatedListState<T> extends Equatable {
         lastError = null;
 
   PaginatedListState<T> addResult(ListResultModel<T> result) {
-    return PaginatedListState._(
+    return PaginatedListState(
       items: items + result.items,
       isLoading: false,
       hasMore: result.hasMore,
@@ -34,7 +34,7 @@ class PaginatedListState<T> extends Equatable {
   }
 
   PaginatedListState<T> loading() {
-    return PaginatedListState._(
+    return PaginatedListState(
       items: items,
       isLoading: true,
       hasMore: hasMore,
@@ -44,7 +44,7 @@ class PaginatedListState<T> extends Equatable {
   }
 
   PaginatedListState<T> withError(Object error) {
-    return PaginatedListState._(
+    return PaginatedListState(
       items: items,
       isLoading: false,
       hasMore: hasMore,

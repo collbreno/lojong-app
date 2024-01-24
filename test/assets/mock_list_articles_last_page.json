@@ -1,0 +1,129 @@
+{
+	"has_more": false,
+	"current_page": 1,
+	"last_page": 1,
+	"next_page": false,
+	"list": [
+		{
+			"id": 10,
+			"text": "A história de uma aventura que desafia os limites do corpo e da mente. Eliane Brum fez um retiro de meditação de dez dias, no interior do Rio de Janeiro. ",
+			"title": "O relato de um retiro de 10 dias de meditação",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/limite.png",
+			"author_name": "Eliane Brum",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/10\/o-relato-de-um-retiro-de-10-dias-de-meditacao",
+			"premium": 0,
+			"order": 9,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/limite.png"
+		},
+		{
+			"id": 13,
+			"text": "Ao longo do dia, você pode parar e acordar para a mágica do mundo ao seu redor. Pema Chödrön fala sobre como esse tipo de prática de atenção plena, ampla e acessível, é a coisa mais importante que podemos fazer em nossas vidas.",
+			"title": "Acordando para o seu mundo",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/pemaatricle.png",
+			"author_name": "Pema Chödrön",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/13\/acordando-para-o-seu-mundo",
+			"premium": 0,
+			"order": 9,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/pemaatricle.png"
+		},
+		{
+			"id": 14,
+			"text": "O passado dói e gatilhos emocionais possuem um modo de nos manter presos em nossos caminhos. A prática de deixar que tudo se vá nos ajuda a seguir em frente.",
+			"title": "Uma prática de atenção plena que você pode tentar hoje: deixar ir!",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/baloon.png",
+			"author_name": "Ed Halliwell",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/14\/uma-pratica-de-atencao-plena-que-voce-pode-tentar-hoje-deixar-ir",
+			"premium": 0,
+			"order": 10,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/baloon.png"
+		},
+		{
+			"id": 15,
+			"text": "A medida que contemplamos a enorme variedade de fatores que devem se unir para produzir um senso específico de individualidade, nosso apego a esse “eu” que achamos que somos começa a se desfazer.",
+			"title": "Tudo muda, até o “eu” muda",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/dentedele.png",
+			"author_name": "Mingyur Rinpoche",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/15\/tudo-muda-ate-o-eu-muda",
+			"premium": 0,
+			"order": 10,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/dentedele.png"
+		},
+		{
+			"id": 32,
+			"text": "Phakchok Rinpoche nos ensina uma prática simples e acessível para o cultivo de uma mente ampla como o céu.",
+			"title": "Criando Espaço",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/32-1.png",
+			"author_name": "Phakchok Rinpoche",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/32\/criando-espaco",
+			"premium": 0,
+			"order": 10,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/images\/artigos\/32-1.png"
+		},
+		{
+			"id": 17,
+			"text": "Passar tempo sozinho com nós mesmos pode não ser fácil ou desejável. Mas é fundamental para conhecer quem realmente somos.",
+			"title": "O poder da solitude",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/solitn.png",
+			"author_name": "Elaine Smookler",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/17\/o-poder-da-solitude",
+			"premium": 0,
+			"order": 11,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/solitn.png"
+		},
+		{
+			"id": 18,
+			"text": "Se você se sente estressado ou sobrecarregado, não se isole das outras pessoas, diz Kelly McGonigal. Ao invés disso, dobre a sua capacidade de criar novas conexões.",
+			"title": "Como ultrapassar o estresse por meio de enxergar a alegria dos outros",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/empke.png",
+			"author_name": "Kelly McGonigal",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/18\/como-ultrapassar-o-estresse-por-meio-de-enxergar-a-alegria-dos-outros",
+			"premium": 0,
+			"order": 12,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/empke.png"
+		},
+		{
+			"id": 19,
+			"text": "Nós tomamos as nossas memórias como gravações perfeitas dos fatos que ocorreram em nossa vida. Mas e se ao invés de gravações perfeitas do que vivenciamos, elas fossem em sua maioria meras histórias fictícias que contamos a nós mesmos numa tentativa de dar sentido às situações da nossa vida? Quem faz esse questionamento é a neurocientista e psicóloga criminal Julia Shaw.",
+			"title": "Seriam as nossas memórias ilusões?",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/memonydani.png",
+			"author_name": "Daniele Vargas",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/19\/seriam-as-nossas-memorias-ilusoes",
+			"premium": 0,
+			"order": 12,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/memonydani.png"
+		},
+		{
+			"id": 20,
+			"text": "O psicólogo Elisha Goldstein fala sobre como a prática de atenção plena pode ajudar no tratamento da depressão.",
+			"title": "Uma prática antidepressiva clássica e natural",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/antidpreess.png",
+			"author_name": "Elisha Goldstein",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/20\/uma-pratica-antidepressiva-classica-e-natural",
+			"premium": 0,
+			"order": 12,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/antidpreess.png"
+		},
+		{
+			"id": 22,
+			"text": "A neurocientista social Dra. Tania Singer fala sobre suas pesquisas e descobertas relacionadas ao treinamento da mente.",
+			"title": "Como o treinamento em meditação transforma o cérebro, o indivíduo e a sociedade em geral",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/art1.jpg",
+			"author_name": "Tania Singer",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/22\/como-o-treinamento-em-meditacao-transforma-o-cerebro-o-individuo-e-a-sociedade-em-geral",
+			"premium": 0,
+			"order": 14,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/art1.jpg"
+		},
+		{
+			"id": 23,
+			"text": "Sem compaixão nós não sobreviveríamos. Ainda assim, nem sempre é fácil trazer a compaixão para a nossa vida diária. Aprenda a fortalecer o seu músculo da empatia com essas 11 dicas e insights.",
+			"title": "A sobrevivência do mais bondoso",
+			"image_url": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/sobrevivenciabondoso.jpg",
+			"author_name": "Elisha Goldstein",
+			"url": "https:\/\/lojongapp.com\/blog\/article\/23\/a-sobrevivencia-do-mais-bondoso",
+			"premium": 0,
+			"order": 15,
+			"image": "https:\/\/d2g3qjbxchhsv1.cloudfront.net\/artigos\/sobrevivenciabondoso.jpg"
+		}
+	]
+}

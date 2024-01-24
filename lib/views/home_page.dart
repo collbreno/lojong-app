@@ -30,12 +30,12 @@ class _HomePageState extends State<HomePage> {
             BlocProvider<ArticleListCubit>(
               create: (context) => ArticleListCubit(
                 context.read<AppRepository>().listArticles,
-              ),
+              )..loadMore(),
             ),
             BlocProvider<QuoteListCubit>(
               create: (context) => QuoteListCubit(
                 context.read<AppRepository>().listQuotes,
-              ),
+              )..loadMore(),
             ),
             BlocProvider<VideoListCubit>(
               create: (context) => VideoListCubit(
