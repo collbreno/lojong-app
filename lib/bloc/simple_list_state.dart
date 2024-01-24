@@ -1,4 +1,4 @@
-import 'package:equatable/equatable.dart';
+part of 'simple_list_cubit.dart';
 
 abstract class SimpleListState<T> extends Equatable {}
 

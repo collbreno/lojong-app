@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lojong/bloc/simple_list_cubit.dart';
-import 'package:lojong/bloc/simple_list_state.dart';
 import 'package:lojong/widgets/app_error_widget.dart';
 
 class SimpleListView<T> extends StatelessWidget {

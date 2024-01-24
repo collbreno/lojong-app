@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
             BlocProvider<VideoListCubit>(
               create: (context) => VideoListCubit(
                 context.read<AppRepository>().listVideos,
-              ),
+              )..load(),
             ),
           ],
           child: const TabBarView(
