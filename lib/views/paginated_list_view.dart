@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lojong/bloc/paginated_list_cubit.dart';
+import 'package:lojong/widgets/app_error_widget.dart';
 
 class PaginatedListView<T> extends StatefulWidget {
   final Widget Function(T item) itemBuilder;
@@ -48,7 +49,7 @@ class _PaginatedListViewState<T> extends State<PaginatedListView<T>> {
         } else if (state.isLoading) {
           return _buildLoadingIndicator();
         } else if (state.lastError != null) {
-          return _buildError(state.lastError!);
+          return _buildError(context, state.lastError!);
         } else {
           return _buildEmptyList();
         }
@@ -112,8 +113,12 @@ class _PaginatedListViewState<T> extends State<PaginatedListView<T>> {
     return const Center(child: CircularProgressIndicator());
   }
 
-  Widget _buildError(Object error) {
-    return const Center(child: Text('Algo deu errado'));
+  Widget _buildError(BuildContext context, Object error) {
+    return Center(
+      child: AppErrorWidget(
+        retry: context.read<PaginatedListCubit<T>>().loadMore,
+      ),
+    );
   }
 
   Widget _buildEmptyList() {
