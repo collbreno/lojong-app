@@ -24,8 +24,7 @@ class AuthorWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _buildName(),
-                const SizedBox(height: 5),
-                _buildDescription(),
+                if (author.description != null) _buildDescription(),
               ],
             ),
           ),
@@ -34,13 +33,16 @@ class AuthorWidget extends StatelessWidget {
     );
   }
 
-  Text _buildDescription() {
-    return Text(
-      author.description,
-      style: GoogleFonts.asap(
-        color: Colors.black54,
-        fontWeight: FontWeight.w400,
-        fontSize: 12,
+  Widget _buildDescription() {
+    return Padding(
+      padding: const EdgeInsets.only(top: 5),
+      child: Text(
+        author.description!,
+        style: GoogleFonts.asap(
+          color: Colors.black54,
+          fontWeight: FontWeight.w400,
+          fontSize: 12,
+        ),
       ),
     );
   }

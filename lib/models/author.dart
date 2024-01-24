@@ -1,6 +1,6 @@
 class AuthorModel {
   final String name;
-  final String description;
+  final String? description;
   final String? imageUrl;
 
   AuthorModel.fromJson(Map<String, dynamic> json)
