@@ -1,3 +1,4 @@
+import 'package:chucker_flutter/chucker_flutter.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -15,11 +16,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RepositoryProvider(
-      create: (context) => AppRepository(
-        Dio(BaseOptions(headers: AppRepository.baseHeaders)),
-      ),
+      create: (context) {
+        final dio = Dio(BaseOptions(headers: AppRepository.baseHeaders));
+        dio.interceptors.add(ChuckerDioInterceptor());
+        return AppRepository(dio);
+      },
       child: MaterialApp(
-        title: 'Flutter Demo',
+        navigatorObservers: [ChuckerFlutter.navigatorObserver],
+        title: 'Lojong Coll',
         theme: AppTheme.createTheme(),
         home: const HomePage(),
       ),

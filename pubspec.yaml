@@ -46,6 +46,7 @@ dependencies:
   share_plus: ^7.2.1
   url_launcher: ^6.2.4
   bloc_test: ^9.1.5
+  chucker_flutter: ^1.6.3
 
 dev_dependencies:
   flutter_test:
